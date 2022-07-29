@@ -1,0 +1,192 @@
+postman testes apis:
+
+organiza requisições em coleções
+
+fazer login no postman para ficar gravado
+
+enviroments cria variaveis para varios ambientes
+
+testar ambiente local so clica no link
+
+
+pode fazer programacao de javascript para ser requisitado ou nao
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+O que é requisição 
+
+para buscar ou modificar dados no servidor, precisamos fazer requisições para as APIs
+
+
+cliente -get--post---put----delete----->APi (nuvem)
+        <-----------json-----xml--------
+		
+Uma requisição consiste em : URL
+                             Método
+							 Header
+							 Body
+URL (um caminho para o recurso (endpoint) o endereço ex: http://exemplo.com
+Método um método HTTP, que define qual ação realizar GET, POST, PUT, DELETE
+HEADER Um cabeçalho (header), que permite ao cliente passar informações da requisição(-Basic HTTP, OAuth, none/-HTTP Headers)
+EX: Content-Type: application/json
+BODY um corpo opcional da mensagem com dados (normalmente em json ou xml)
+
+
+htpp cada uma das requisições tem um método http (protocolo para comunicação da internet)
+                                                                                A
+esse https vão ter 4 tipos de métodos ou verbos mais comuns são : GET|-----POST |------PUT (>)-----DELETE
+ 
+                                                                     V	
+MÉTODO GET: Obter informação de um recurso pelo seu identificador ou uma lista de informações
+MÉTODO POST: Criar algo no recurso no servidor	(pega do daddos)
+MÉTODO PUT: Atualizar alguma informação no servudor(update
+DELETE		
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+Criar um GET
+
+postman( new-> HTTP requests->Get(url = requestname no caso coloquei PegarTodosCliente-> salvar em uma coleção
+
+no exemplo api utilizada foi em kotlin utilizado o gradle como gerenciador de pacote
+spring boot framwork utilizado para kotlin e java
+
+rodar a aplicação kt
+
+rodar localhost:8080 no postman
+
+e gerará no pretty a resposta
+
+A GET e BODY NÃO PRECISA DE BODY SÓ PUT E POST
+
+COMO FAZER O GET passar parâmetro
+
+no caso vamos fazer um teste para algo que eu nao fiz ainda no readme do proejto tem endpoint /cliente/id que nao cobrimos com nossos testes esse endpoisn /cliente/id  significa nesse caso que vamos passar o numero que identifica nosso cliente no caminho no path o endpoint em si que queremos obter escplhero  o cliente que queremos e no caminho passamos o ide do cliente criamos uma nova requesicao com nome util 
+
+colocamos nome Pega cliente baseado no seu id 
+e coloca o id do local host
+
+
+para pegar o id vai em pegar clientes mas nao temos nada criado
+
+entao vamos em post e criar vai em new 
+
+nome salvar
+
+o corpo da reuisicao post deve ter uma documentacao da empresa que diz o fromato do corpo
+que aquele tipo de servico aceita
+
+em geral tem um sueguer para isso
+
+no nosso curso esta no readme
+
+qual endpoint vai poder receber qual tipo de requisicao 
+
+
+vai no body depois raw e cola o corpo que ta na readme tenho que esoclher json
+vai em text e escolhem json
+
+obseve que toda vez que troco o nome adiciono cliente ou outras coisas
+
+aumenta a lista e no inlliji e relfetido no terminal no caso cliente controller
+
+MÉTODO PUT é para atualizar
+
+coloca Atuliza Cliente
+
+qual endpoint vou colocar? readme documentação 
+
+lembrar de colocar um json de corpo na body
+ coloca  a mesma do post pq queremos atualizar o cliente
+ raW-->> json
+ 
+ meu get por enquanto nao tem nada pois quando atualizo servidor ele nao fica gravado 
+ em banco de dado s e sim na memoria
+ 
+ primeiro vamos uamentar o numero de clientes no post trocado nome e id e send
+ 
+ 
+ depois vamos me put
+ 
+ troca algumas infs no body e send e muda
+ 
+ resposta  e 200  e ok e o servidor fala
+ 
+ DELETE 
+ 
+ pelo readme vai em cliente e coloca o id do cliente que vc quer apagar
+ vai em get  pegar todos os clientes localhost:8080 e send
+ 
+ 
+ no body embaixo vai aparecer
+ 
+ e depois vai em delete e coloca localhost:8080/cliente/ 423486789
+ 
+ 
+ METODO GET E DELETE NAO TEM CORPO
+ 
+ A DOCUMENTACAO SEMPRE DIZ COMO VAI SER O ENDPOINT
+ 
+ ve o servidor e no get que ele foi removido
+ 
+ 
+ --------autenticação Basic Auth no POSTMAN ------------
+ 
+ 
+ Limitar quem tem acesso a determinados end point
+ 
+ base autenticantion
+ 
+ 
+ ex eu cirie um get autorizado com risco no new GET a forma de novo ta no servidor readme
+ 
+ localhost:8080/risco/ 123486789
+ 
+ no exemplo vai da nao autorizado 401 nao passei as autorizações
+ 
+ 
+ 
+ posso passar a autoirzacao heads bodys ou como parametro de requisicao quem cria a api vai dizer como vai ser vai em autorizacao 
+ 
+ 
+ coloca o type no caso basic auth coloco login e senha
+ 
+ 
+ e coloco send e voltou ele manda para headers criando o token que foi para o servidor
+ 
+ 
+ com o end point eu jogo no chome e no chorme privaitvo (pede senha de novo)
+ 
+ 
+ ELE PODE RODAR todos os TESTES DE UMA VEZ 
+ 
+ 
+ 
+ EM ALGUNS CASOS VOU PODER RODAS TODOS DE UMA VEZ COMO TESTE DE REGRESSAO
+ posta deletar atualozar e depois deletar o cliente baseado no id do tio patinhas
+ 
+ 
+ primeiro ve se api ta funcionando e e mais rapido
+ 
+ 
+ 
+ duas formas
+ 
+ 
+ 
+ vai na colecao e clica em play
+ 
+ depois runner 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+
